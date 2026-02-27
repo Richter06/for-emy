@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amor</title>
+<link rel="stylesheet" href="../design/style.css">
+<style>
+/* Layout centralizado e fundo */
+body.amour {
+    background-color: rgb(235, 49, 49);
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+/* Imagem grande */
+.img-grande {
+    width: 25%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border: solid 3px #000;
+}
+
+/* Corações animados */
+.hearts span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 30px;
+    animation: subir 6s linear infinite;
+}
+
+/* posições diferentes */
+.hearts span:nth-child(1) { left: 10%; animation-duration: 5s; }
+.hearts span:nth-child(2) { left: 30%; animation-duration: 7s; }
+.hearts span:nth-child(3) { left: 50%; animation-duration: 6s; }
+.hearts span:nth-child(4) { left: 70%; animation-duration: 8s; }
+.hearts span:nth-child(5) { left: 90%; animation-duration: 5.5s; }
+
+/* animação subir */
+@keyframes subir {
+    0% {
+        transform: translateY(0) rotate(-90deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(180deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+<body class="amour">
+
+
+<!-- Imagem grande -->
+<img src="../design/us.png" class="img-grande" alt="Minha imagem">
+
+<!-- Corações animados -->
+<div class="hearts">
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💗</span>
+    <span>💘</span>
+    <span>💕</span>
+</div>
+
+
+
+<audio controls autoplay loop>
+    <source src="../design/musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+</audio>
+
+
+
+</body>
+</html>
